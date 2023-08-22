@@ -62,11 +62,17 @@ void _sub_(stack_t **h, unsigned int ct);
 /* 2 */
 void _mul_(stack_t **h, unsigned int ct);
 void _div_(stack_t **h, unsigned int ct);
+/* 3 */
+void _mod_(stack_t **h, unsigned int ct);
 
 /* push-pall-pint functions */
 void _push_(stack_t **h, unsigned int ct);
 void _pall_(stack_t **h, unsigned int ct);
 void _pint_(stack_t **h, unsigned int ct);
-/* pop- */
+/* pop-swap-nop functions */
 void _pop_(stack_t **h, unsigned int ct);
+void _swap_(stack_t **h, unsigned int ct);
+void _nop_(stack_t **h, unsigned int ct);
+/* */
+void addNode(stack_t **h, int m);
 #endif
