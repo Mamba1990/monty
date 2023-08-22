@@ -63,8 +63,10 @@ void _sub_(stack_t **h, unsigned int ct);
 void _mul_(stack_t **h, unsigned int ct);
 void _div_(stack_t **h, unsigned int ct);
 
-/* push-pall functions */
+/* push-pall-pint functions */
 void _push_(stack_t **h, unsigned int ct);
 void _pall_(stack_t **h, unsigned int ct);
-
+void _pint_(stack_t **h, unsigned int ct);
+/* pop- */
+void _pop_(stack_t **h, unsigned int ct);
 #endif
