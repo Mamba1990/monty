@@ -75,4 +75,17 @@ void _swap_(stack_t **h, unsigned int ct);
 void _nop_(stack_t **h, unsigned int ct);
 /* */
 void addNode(stack_t **h, int m);
+/* */
+void _pchar_(stack_t **h, unsigned int ct);
+void _pstr_(stack_t **h, unsigned int ct);
+/* Roatation functions */
+void _rotl_(stack_t **h,  __attribute__((unused)) unsigned int ct);
+void _rotr_(stack_t **h, __attribute__((unused)) unsigned int ct);
+/* stack-queue functions */
+void _stack_(stack_t **h, unsigned int ct);
+void _queue_(stack_t **h, unsigned int ct);
+void addQueue(stack_t **h, int m);
+/* */
+void freeStack(stack_t *h);
+int op_exec(char *cont, stack_t **st, unsigned int ct, FILE *file);
 #endif
