@@ -54,4 +54,13 @@ typedef struct stc_bus
 	int lf;
 }  bus_t;
 extern bus_t buss;
+
+/* Caluclation functioons */
+/* 1 */
+void _add_(stack_t **h, unsigned int ct);
+void _sub_(stack_t **h, unsigned int ct);
+/* 2 */
+void _mul_(stack_t **h, unsigned int ct);
+void _div_(stack_t **h, unsigned int ct);
+
 #endif

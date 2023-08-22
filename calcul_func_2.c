@@ -20,7 +20,7 @@ void _mul_(stack_t **h, unsigned int ct)
 	{
 		fprintf(stderr, "L%d: can't mul, stack too short\n", ct);
 		fclose(buss.file);
-		free(buss.content);
+		free(buss.cont);
 		free_stack(*h);
 		exit(EXIT_FAILURE);
 	}
@@ -53,7 +53,7 @@ void _div_(stack_t **h, unsigned int ct)
 	{
 		fprintf(stderr, "L%d: can't div, stack too short\n", ct);
 		fclose(buss.file);
-		free(buss.ct);
+		free(buss.cont);
 		free_stack(*h);
 		exit(EXIT_FAILURE);
 	}
@@ -62,7 +62,7 @@ void _div_(stack_t **h, unsigned int ct)
 	{
 		fprintf(stderr, "L%d: division by zero\n", ct);
 		fclose(buss.file);
-		free(buss.ct);
+		free(buss.cont);
 		free_stack(*h);
 		exit(EXIT_FAILURE);
 	}
