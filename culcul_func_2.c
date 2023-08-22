@@ -1,73 +1,73 @@
 #include "monty.h"
 /**
- * _mul_ - multiplies the top two elements of the stack.
- * @head: stack head
- * @counter: line_number
- * Return: no return
+ * _mul_ - calculates the mul of the top two stack's elms
+ * @h: head of stack
+ * @ct: number's line
+ * Return: nothing
 */
-void f_mul(stack_t **head, unsigned int counter)
+void _mul_(stack_t **h, unsigned int ct)
 {
-	stack_t *h;
-	int len = 0, aux;
+	stack_t *head;
+	int length = 0, au;
 
-	h = *head;
-	while (h)
+	head = *h;
+	while (head)
 	{
-		h = h->next;
-		len++;
+		head = head->next;
+		length++;
 	}
-	if (len < 2)
+	if (length < 2)
 	{
-		fprintf(stderr, "L%d: can't mul, stack too short\n", counter);
-		fclose(bus.file);
-		free(bus.content);
-		free_stack(*head);
+		fprintf(stderr, "L%d: can't mul, stack too short\n", ct);
+		fclose(buss.file);
+		free(buss.content);
+		free_stack(*h);
 		exit(EXIT_FAILURE);
 	}
-	h = *head;
-	aux = h->next->n * h->n;
-	h->next->n = aux;
-	*head = h->next;
-	free(h);
+	head = *h;
+	au = head->next->n * head->n;
+	head->next->n = au;
+	*h = head->next;
+	free(head);
 }
 
 
 /**
- * f_div - divides the top two elements of the stack.
- * @head: stack head
- * @counter: line_number
- * Return: no return
+ * _div_ - divides the top two stack's elements
+ * @h: head of stack
+ * @ct: number's line
+ * Return: nothing
 */
-void f_div(stack_t **head, unsigned int counter)
+void _div_(stack_t **h, unsigned int ct)
 {
-	stack_t *h;
-	int len = 0, aux;
+	stack_t *head;
+	int length = 0, au;
 
-	h = *head;
-	while (h)
+	head = *h;
+	while (head)
 	{
-		h = h->next;
-		len++;
+		head = head->next;
+		length++;
 	}
-	if (len < 2)
+	if (length < 2)
 	{
-		fprintf(stderr, "L%d: can't div, stack too short\n", counter);
-		fclose(bus.file);
-		free(bus.content);
-		free_stack(*head);
+		fprintf(stderr, "L%d: can't div, stack too short\n", ct);
+		fclose(buss.file);
+		free(buss.ct);
+		free_stack(*h);
 		exit(EXIT_FAILURE);
 	}
-	h = *head;
-	if (h->n == 0)
+	head = *h;
+	if (head->n == 0)
 	{
-		fprintf(stderr, "L%d: division by zero\n", counter);
-		fclose(bus.file);
-		free(bus.content);
-		free_stack(*head);
+		fprintf(stderr, "L%d: division by zero\n", ct);
+		fclose(buss.file);
+		free(buss.ct);
+		free_stack(*h);
 		exit(EXIT_FAILURE);
 	}
-	aux = h->next->n / h->n;
-	h->next->n = aux;
-	*head = h->next;
-	free(h);
+	au = head->next->n / head->n;
+	head->next->n = au;
+	*h = head->next;
+	free(head);
 }
