@@ -1,4 +1,6 @@
 #include "monty.h"
+#include <stdio.h>
+#include <stdlib.h>
 bus_t buss = {NULL, NULL, NULL, 0};
 /**
 * main - the code interpreter
@@ -8,9 +10,9 @@ bus_t buss = {NULL, NULL, NULL, 0};
 */
 int main(int argc, char *argv[])
 {
-	char *cont;
+	char *content;
 	FILE *file;
-	size_t s = 0;
+	size_t size = 0;
 	ssize_t readLine = 1;
 	stack_t *st = NULL;
 	unsigned int ct = 0;
@@ -29,15 +31,15 @@ int main(int argc, char *argv[])
 	}
 	while (readLine > 0)
 	{
-		cont = NULL;
-		readLine = getline(&cont, &s, file);
-		buss.content = cont;
+		content = NULL;
+		readLine = getline(&content, &size, file);
+		buss.cont = content;
 		ct++;
 		if (readLine > 0)
 		{
-			op_exec(con, &st, ct, file);
+			op_exec(content, &st, ct, file);
 		}
-		free(cont);
+		free(content);
 	}
 	freeStack(st);
 	fclose(file);

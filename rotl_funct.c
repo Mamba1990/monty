@@ -7,9 +7,9 @@
  */
 void _rotl_(stack_t **h,  __attribute__((unused)) unsigned int ct)
 {
-	stack_t *t = *, *au;
+	stack_t *t = *h, *au;
 
-	if (*h == NULL || (*h->next == NULL)
+	if (*h == NULL || ((*h)->next == NULL))
 	{
 		return;
 	}

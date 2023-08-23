@@ -20,8 +20,8 @@ void _add_(stack_t **h, unsigned int ct)
 	{
 		fprintf(stderr, "L%d: can't add, stack too short\n", ct);
 		fclose(buss.file);
-		free(buss.ct);
-		free_stack(*h);
+		free(buss.cont);
+		freeStack(*h);
 		exit(EXIT_FAILURE);
 	}
 	head = *h;
@@ -43,7 +43,7 @@ void _sub_(stack_t **h, unsigned int ct)
 	int _sus, _nodes;
 
 	au = *h;
-	_nodes = 0
+	_nodes = 0;
 	while (au != NULL)
 	{
 		au = au->next;
@@ -53,13 +53,13 @@ void _sub_(stack_t **h, unsigned int ct)
 	{
 		fprintf(stderr, "L%d: can't sub, stack too short\n", ct);
 		fclose(buss.file);
-		free(buss.ct);
-		free_stack(*h);
+		free(buss.cont);
+		freeStack(*h);
 		exit(EXIT_FAILURE);
 	}
 	au = *h;
-	_sus = au->next->n - aux->n;
-	au->next->n = suss;
+	_sus = au->next->n - au->n;
+	au->next->n = _sus;
 	*h = au->next;
 	free(au);
 }

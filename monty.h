@@ -7,7 +7,7 @@
 #include <fcntl.h>
 #include <string.h>
 #include <ctype.h>
-
+#define  _POSIX_C_SOURCE 200809L
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -94,4 +94,5 @@ void addQueue(stack_t **h, int m);
 /* */
 void freeStack(stack_t *h);
 int op_exec(char *cont, stack_t **st, unsigned int ct, FILE *file);
+
 #endif
